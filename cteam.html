@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create / Manage Team - Quick Teams</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header, footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        header h1, footer p {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form textarea,
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        form textarea {
+            resize: vertical;
+        }
+
+        form button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .member-card, .request-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .member-card p, .request-card p {
+            margin: 0;
+        }
+
+        .request-card button {
+            margin-left: 5px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .accept-btn {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .reject-btn {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .edit-team input, .edit-team textarea, .edit-team select {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Quick Teams</h1>
+</header>
+
+<div class="container">
+
+    <!-- Create Team Form -->
+    <div class="section">
+        <h2>Create Your Team</h2>
+        <form>
+            <label for="teamName">Team Name</label>
+            <input type="text" id="teamName" placeholder="Enter team name">
+
+            <label for="teamDescription">Description / Purpose</label>
+            <textarea id="teamDescription" rows="3" placeholder="Describe your team"></textarea>
+
+            <label for="skillsRequired">Skills Required</label>
+            <input type="text" id="skillsRequired" placeholder="e.g., Python, UI/UX, C++">
+
+            <label for="maxMembers">Maximum Members</label>
+            <input type="number" id="maxMembers" placeholder="e.g., 5">
+
+            <button type="submit">Create Team</button>
+        </form>
+    </div>
+
+    <!-- Current Team Members -->
+    <div class="section">
+        <h2>Current Team Members</h2>
+        <div class="member-card">
+            <p>John Doe - Developer</p>
+        </div>
+        <div class="member-card">
+            <p>Jane Smith - Designer</p>
+        </div>
+    </div>
+
+    <!-- Requests Section -->
+    <div class="section">
+        <h2>Join Requests</h2>
+        <div class="request-card">
+            <p>Alex Johnson - Wants to join as Developer</p>
+            <div>
+                <button class="accept-btn">Accept</button>
+                <button class="reject-btn">Reject</button>
+            </div>
+        </div>
+        <div class="request-card">
+            <p>Emily Davis - Wants to join as Designer</p>
+            <div>
+                <button class="accept-btn">Accept</button>
+                <button class="reject-btn">Reject</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Team Details -->
+    <div class="section">
+        <h2>Edit Team Details</h2>
+        <form class="edit-team">
+            <label for="editTeamName">Team Name</label>
+            <input type="text" id="editTeamName" value="Team Alpha">
+
+            <label for="editTeamDescription">Description / Purpose</label>
+            <textarea id="editTeamDescription" rows="3">Building AI-based web applications.</textarea>
+
+            <label for="editSkillsRequired">Skills Required</label>
+            <input type="text" id="editSkillsRequired" value="Python, Machine Learning">
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2025 Quick Teams. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
