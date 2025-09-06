@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Team - Quick Teams</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header, footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        header h1, footer p {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+        }
+
+        .main-content {
+            flex: 3;
+        }
+
+        .sidebar {
+            flex: 1;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .search-bar {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 4px 0 0 4px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .filters {
+            margin-bottom: 20px;
+        }
+
+        .filters label {
+            margin-right: 10px;
+        }
+
+        .team-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .team-card h3 {
+            margin: 0 0 5px 0;
+        }
+
+        .team-card p {
+            margin: 5px 0;
+        }
+
+        .team-card button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+        }
+
+        .sidebar .suggested-team {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Quick Teams</h1>
+</header>
+
+<div class="container">
+    <div class="main-content">
+        <!-- Search -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search by skills, interest, or team name">
+            <button>Search</button>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <label>Experience:
+                <select>
+                    <option>Any</option>
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Expert</option>
+                </select>
+            </label>
+            <label>Role:
+                <select>
+                    <option>Any</option>
+                    <option>Developer</option>
+                    <option>Designer</option>
+                    <option>Data Scientist</option>
+                </select>
+            </label>
+            <label>Availability:
+                <select>
+                    <option>Any</option>
+                    <option>Full-Time</option>
+                    <option>Part-Time</option>
+                </select>
+            </label>
+        </div>
+
+        <!-- Team Cards -->
+        <div class="team-card">
+            <h3>Team Alpha</h3>
+            <p><strong>Members:</strong> 3</p>
+            <p><strong>Skills Needed:</strong> Python, Machine Learning</p>
+            <p>A team working on AI-based web applications.</p>
+            <button>Request to Join</button>
+        </div>
+
+        <div class="team-card">
+            <h3>Design Gurus</h3>
+            <p><strong>Members:</strong> 4</p>
+            <p><strong>Skills Needed:</strong> UI/UX, Figma</p>
+            <p>Creative team focusing on designing intuitive interfaces.</p>
+            <button>Request to Join</button>
+        </div>
+
+        <div class="team-card">
+            <h3>Code Wizards</h3>
+            <p><strong>Members:</strong> 5</p>
+            <p><strong>Skills Needed:</strong> C++, Python</p>
+            <p>Building software tools for developers.</p>
+            <button>Request to Join</button>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>Suggested Teams</h3>
+        <div class="suggested-team">
+            <p><strong>Team Beta</strong></p>
+            <p>Needs: JavaScript, React</p>
+        </div>
+        <div class="suggested-team">
+            <p><strong>Data Crunchers</strong></p>
+            <p>Needs: Python, Pandas</p>
+        </div>
+        <div class="suggested-team">
+            <p><strong>UX Ninjas</strong></p>
+            <p>Needs: UI/UX, Figma</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Quick Teams. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
